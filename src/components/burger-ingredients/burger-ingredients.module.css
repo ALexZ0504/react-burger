@@ -1,0 +1,72 @@
+.container {
+  width: 600px;
+  height: 912px;
+  background-color: rgb(31, 35, 52);
+}
+
+.title {
+  width: 600px;
+  height: 40px;
+  border: 1px solid #4c4cff;
+  margin: 40px 0 20px 0;
+  font-family: JetBrains Mono;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: left;
+}
+
+.tabName {
+  width: 600px;
+  height: 30px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: left;
+  margin: 40px 0 24px 0;
+}
+
+.items {
+  width: 600px;
+  height: 756px;
+  border: 1px solid #4c4cff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img {
+  width: 240px;
+  height: 120px;
+}
+
+.priceBox {
+  display: flex;
+  justify-content: space-between;
+  width: 62px;
+  height: 24px;
+  margin: 4px 0 4px 0;
+}
+
+.price {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+}
+
+.description {
+  border: 1px solid #4c4cff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  margin: 0;
+}
