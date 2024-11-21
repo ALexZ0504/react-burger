@@ -19,51 +19,57 @@ function BurgerIngredients() {
         <div className={styles.item}>
           <img className={styles.img} src={n200i}></img>
           <div className={styles.priceBox}>
-            <h3 className={styles.price}>20</h3>
+            <h3 className="text text_type_digits-default">20</h3>
             <CurrencyIcon />
           </div>
-          <p className={styles.description}>Краторная булка N-200i</p>
+          <p className="text text_type_main-small">Краторная булка N-200i</p>
         </div>
         <div className={styles.item}>
           <img className={styles.img} src={r2d3}></img>
           <div className={styles.priceBox}>
-            <h3 className={styles.price}>20</h3>
+            <h3 className="text text_type_digits-default">20</h3>
             <CurrencyIcon />
           </div>
-          <p className={styles.description}>Флюоресцентная булка R2-D3</p>
+          <p className="text text_type_main-small">
+            Флюоресцентная булка R2-D3
+          </p>
         </div>
         <h3 className={styles.tabName}>Соусы</h3>
         <div className={styles.item}>
           <img className={styles.img} src={spicyX}></img>
           <div className={styles.priceBox}>
-            <h3 className={styles.price}>30</h3>
+            <h3 className="text text_type_digits-default">30</h3>
             <CurrencyIcon />
           </div>
-          <p className={styles.description}>Соус Spicy-X</p>
+          <p className="text text_type_main-small">Соус Spicy-X</p>
         </div>
         <div className={styles.item}>
           <img className={styles.img} src={space}></img>
           <div className={styles.priceBox}>
-            <h3 className={styles.price}>30</h3>
+            <h3 className="text text_type_digits-default">30</h3>
             <CurrencyIcon />
           </div>
-          <p className={styles.description}>Соус фирменный Space Sauce</p>
+          <p className="text text_type_main-small">
+            Соус фирменный Space Sauce
+          </p>
         </div>
         <div className={styles.item}>
           <img className={styles.img} src={traditional}></img>
           <div className={styles.priceBox}>
-            <h3 className={styles.price}>30</h3>
+            <h3 className="text text_type_digits-default">30</h3>
             <CurrencyIcon />
           </div>
-          <p className={styles.description}>Соус традиционный галактический</p>
+          <p className="text text_type_main-small">
+            Соус традиционный галактический
+          </p>
         </div>
         <div className={styles.item}>
           <img className={styles.img} src={antarian}></img>
           <div className={styles.priceBox}>
-            <h3 className={styles.price}>30</h3>
+            <h3 className="text text_type_digits-default">30</h3>
             <CurrencyIcon />
           </div>
-          <p className={styles.description}>
+          <p className="text text_type_main-small">
             Соус с шипами Антарианского плоскоходца
           </p>
         </div>

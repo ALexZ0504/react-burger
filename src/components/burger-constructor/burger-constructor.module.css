@@ -1,5 +1,29 @@
 .container {
   width: 600px;
   height: 912px;
-  background-color: rgb(31, 35, 52);
+  background-color: #131316;
+  border: 1px solid #4c4cff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order {
+  width: 568px;
+  height: 64px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+}
+
+.priceBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.size {
+  width: 36px;
+  height: 36px;
 }

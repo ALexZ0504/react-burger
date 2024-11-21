@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   height: 88px;
-  padding: 0 320px;
   background-color: #1c1c21;
+  justify-content: space-around;
 }
 
 .nav {
@@ -21,6 +21,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.logo {
+  position: absolute;
 }
 
 .link {
