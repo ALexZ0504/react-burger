@@ -18,7 +18,9 @@ function BurgerComponent({ productId, visible, available }) {
       <img className={visibility} src={move} />
       <div className={styles.box}>
         <img className={styles.img} src={product.image} alt={product.name} />
-        <h2 className={styles.name}>{product.name}</h2>
+        <h2 className={`${styles.name} text text_type_main-small`}>
+          {product.name}
+        </h2>
         <div className={styles.priceBox}>
           <p className="text text_type_digits-default">{product.price}</p>
           <CurrencyIcon />

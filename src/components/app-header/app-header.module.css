@@ -8,6 +8,7 @@
 
 .nav {
   display: flex;
+  gap: 8px;
   width: 383px;
   height: 56px;
   justify-content: space-between;
@@ -19,6 +20,7 @@
   border: 1px dashed #4c4cff;
   border-radius: 40px;
   display: flex;
+  gap: 8px;
   align-items: center;
   justify-content: center;
 }

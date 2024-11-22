@@ -2,6 +2,7 @@
   width: 600px;
   height: 912px;
   background-color: #131316;
+  border: 1px solid #4c4cff;
 }
 
 .title {
@@ -9,7 +10,6 @@
   height: 40px;
   border: 1px solid #4c4cff;
   margin: 40px 0 20px 0;
-  font-family: JetBrains Mono;
   font-size: 36px;
   font-weight: 700;
   line-height: 40px;
@@ -36,46 +36,4 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 24px;
-}
-
-.item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid #4c4cff;
-  width: 272px;
-  height: 208px;
-}
-
-.img {
-  width: 240px;
-  height: 120px;
-  border: 1px solid #4c4cff;
-}
-
-.priceBox {
-  display: flex;
-  justify-content: space-between;
-  width: 62px;
-  height: 24px;
-  margin: 4px 0 4px 0;
-  border: 1px solid #4c4cff;
-}
-
-.price {
-  margin: 0;
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 24px;
-  text-align: center;
-}
-
-.description {
-  border: 1px solid #4c4cff;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  text-align: center;
-  margin: 0;
-  width: 240px;
 }

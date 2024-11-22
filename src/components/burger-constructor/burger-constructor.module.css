@@ -15,12 +15,14 @@
   display: flex;
   justify-content: flex-end;
   gap: 40px;
+  border: 1px solid #4c4cff;
 }
 
 .priceBox {
   display: flex;
   align-items: center;
   gap: 8px;
+  border: 1px solid #4c4cff;
 }
 
 .size {
