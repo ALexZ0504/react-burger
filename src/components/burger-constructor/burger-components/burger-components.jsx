@@ -6,12 +6,15 @@ function BurgerComponents() {
   return (
     <div className={styles.container}>
       <BurgerComponent productId={data[0]._id} />
-      <BurgerComponent productId={data[5]._id} visible available />
-      <BurgerComponent productId={data[2]._id} visible available />
-      <BurgerComponent productId={data[4]._id} visible available />
-      <BurgerComponent productId={data[7]._id} visible available />
-      <BurgerComponent productId={data[8]._id} visible available />
-      <BurgerComponent productId={data[8]._id} visible available />
+      <div className={styles.scroll}>
+        <BurgerComponent productId={data[5]._id} visible available />
+        <BurgerComponent productId={data[2]._id} visible available />
+        <BurgerComponent productId={data[4]._id} visible available />
+        <BurgerComponent productId={data[7]._id} visible available />
+        <BurgerComponent productId={data[8]._id} visible available />
+        <BurgerComponent productId={data[8]._id} visible available />
+      </div>
+
       <BurgerComponent productId={data[0]._id} />
     </div>
   );

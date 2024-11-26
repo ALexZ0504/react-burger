@@ -16,7 +16,9 @@ function AppHeader() {
         </div>
         <div className={styles.box_list}>
           <ListIcon type="secondary" />
-          <a className={`${styles.link} text text_type_main-small`}>
+          <a
+            className={`${styles.link} text text_type_main-default text_color_inactive`}
+          >
             Лента заказов
           </a>
         </div>
@@ -25,7 +27,7 @@ function AppHeader() {
       <div className={styles.box_cabinet}>
         <ProfileIcon type="secondary" />
         <a
-          className={`${styles.link} text text_type_main-small`}
+          className={`${styles.link} text text_type_main-default text_color_inactive`}
           type="secondary"
         >
           Личный кабинет
