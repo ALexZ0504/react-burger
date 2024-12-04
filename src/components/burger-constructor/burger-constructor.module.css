@@ -2,7 +2,7 @@
   width: 600px;
   height: 912px;
   background-color: #131316;
-  border: 1px solid #4c4cff;
+  /* border: 1px solid #4c4cff; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,14 +15,14 @@
   display: flex;
   justify-content: flex-end;
   gap: 40px;
-  border: 1px solid #4c4cff;
+  /* border: 1px solid #4c4cff; */
 }
 
 .priceBox {
   display: flex;
   align-items: center;
   gap: 8px;
-  border: 1px solid #4c4cff;
+  /* border: 1px solid #4c4cff; */
 }
 
 .size {

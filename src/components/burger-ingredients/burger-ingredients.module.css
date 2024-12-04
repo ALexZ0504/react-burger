@@ -2,13 +2,13 @@
   width: 600px;
   height: 912px;
   background-color: #131316;
-  border: 1px solid #4c4cff;
+  /* border: 1px solid #4c4cff; */
 }
 
 .title {
   width: 600px;
   height: 40px;
-  border: 1px solid #4c4cff;
+  /* border: 1px solid #4c4cff; */
   margin: 40px 0 20px 0;
   font-size: 36px;
   font-weight: 700;
@@ -19,7 +19,7 @@
 .tabName {
   width: 600px;
   height: 30px;
-  border: 1px solid #4c4cff;
+  /* border: 1px solid #4c4cff; */
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
@@ -31,9 +31,18 @@
   width: 600px;
   height: 756px;
   overflow-y: auto;
-  border: 1px solid #4c4cff;
+  /* border: 1px solid #4c4cff; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 24px;
+}
+
+.items::-webkit-scrollbar {
+  width: 8px;
+  background-color: #2f2f37;
+}
+
+.items::-webkit-scrollbar-thumb {
+  background-color: #8585ad;
 }

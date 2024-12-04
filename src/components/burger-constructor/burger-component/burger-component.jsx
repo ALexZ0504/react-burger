@@ -1,6 +1,6 @@
 import styles from "./burger-component.module.css";
 import { data } from "../../../utils/data";
-import move from "../../../images/move.png";
+import move from "../../../images/move1.png";
 import { CurrencyIcon } from "@ya.praktikum/react-developer-burger-ui-components";
 import { DeleteIcon } from "@ya.praktikum/react-developer-burger-ui-components";
 import { LockIcon } from "@ya.praktikum/react-developer-burger-ui-components";

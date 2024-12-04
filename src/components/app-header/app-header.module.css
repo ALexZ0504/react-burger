@@ -17,7 +17,7 @@
 .box {
   width: 178px;
   height: 56px;
-  border: 1px dashed #4c4cff;
+  /* border: 1px dashed #4c4cff; */
   border-radius: 40px;
   display: flex;
   gap: 8px;

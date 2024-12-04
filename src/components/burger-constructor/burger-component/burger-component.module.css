@@ -1,7 +1,7 @@
 .component {
   width: 568px;
   height: 80px;
-  border: 1px solid #4c4cff;
+  /* border: 1px solid #4c4cff; */
   background-color: #131316;
   display: flex;
   align-items: center;
@@ -10,6 +10,8 @@
 
 .move {
   z-index: 1;
+  padding: 3.5px 5.5px;
+  /* border: 1px solid #4c4cff; */
 }
 
 .move_none {
@@ -24,13 +26,13 @@
   height: 80px;
   gap: 20px;
   border-radius: 40px;
-  border: 1px solid #4c4cff;
+  /* border: 1px solid #4c4cff; */
 }
 
 .img {
   width: 80px;
   height: 40px;
-  border: 1px solid #4c4cff;
+  /* border: 1px solid #4c4cff; */
 }
 
 .name {
@@ -38,7 +40,7 @@
   align-items: center;
   width: 254px;
   height: 48px;
-  border: 1px solid #4c4cff;
+  /* border: 1px solid #4c4cff; */
   margin: 0;
   font-size: 16px;
   font-weight: 400;
@@ -49,7 +51,8 @@
   display: flex;
   height: 24px;
   align-items: center;
+  justify-content: flex-end;
   width: 95px;
   gap: 8px;
-  border: 1px solid #4c4cff;
+  /* border: 1px solid #4c4cff; */
 }

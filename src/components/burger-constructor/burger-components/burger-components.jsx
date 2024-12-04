@@ -14,7 +14,6 @@ function BurgerComponents() {
         <BurgerComponent productId={data[8]._id} visible available />
         <BurgerComponent productId={data[8]._id} visible available />
       </div>
-
       <BurgerComponent productId={data[0]._id} />
     </div>
   );
