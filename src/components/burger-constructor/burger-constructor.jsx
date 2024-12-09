@@ -5,7 +5,7 @@ import { Button } from "@ya.praktikum/react-developer-burger-ui-components";
 
 function BurgerConstructor() {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <BurgerComponents />
       <div className={styles.order}>
         <div className={styles.priceBox}>
@@ -16,7 +16,7 @@ function BurgerConstructor() {
           Оформить заказ
         </Button>
       </div>
-    </div>
+    </section>
   );
 }
 
