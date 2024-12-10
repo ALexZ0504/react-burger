@@ -2,6 +2,7 @@ import styles from "./burger-item.module.css";
 import { CurrencyIcon } from "@ya.praktikum/react-developer-burger-ui-components";
 import { data } from "../../../utils/data";
 import { Counter } from "@ya.praktikum/react-developer-burger-ui-components";
+import PropTypes from "prop-types";
 
 function BurgerItem({ productId }) {
   const product = data.find((p) => p._id === productId);
@@ -24,5 +25,9 @@ function BurgerItem({ productId }) {
     </div>
   );
 }
+
+BurgerItem.propTypes = {
+  productId: PropTypes.string,
+};
 
 export default BurgerItem;

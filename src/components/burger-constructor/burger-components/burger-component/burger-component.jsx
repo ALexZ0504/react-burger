@@ -2,6 +2,7 @@ import styles from "./burger-component.module.css";
 import { data } from "../../../../utils/data";
 import move from "../../../../images/move1.png";
 import { ConstructorElement } from "@ya.praktikum/react-developer-burger-ui-components";
+import PropTypes from "prop-types";
 
 function BurgerComponent({ productId, visible, type, isLocked }) {
   const product = data.find((p) => p._id === productId);
@@ -21,5 +22,12 @@ function BurgerComponent({ productId, visible, type, isLocked }) {
     </div>
   );
 }
+
+BurgerComponent.propTypes = {
+  productId: PropTypes.string,
+  visible: PropTypes.oneOf(["styles.move_none", "styles.move_none"]),
+  type: PropTypes.string,
+  isLocked: PropTypes.any,
+};
 
 export default BurgerComponent;
