@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  align-items: center;
+  height: 88px;
+  background-color: #1c1c21;
+  justify-content: space-around;
+}
+
+.nav {
+  display: flex;
+  gap: 8px;
+  width: 383px;
+  height: 56px;
+  justify-content: space-between;
+}
+
+.box {
+  width: 178px;
+  height: 56px;
+  /* border: 1px dashed #4c4cff; */
+  border-radius: 40px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  position: absolute;
+}
+
+.link {
+  margin-left: 8px;
+}
+
+.box_list {
+  composes: box;
+  width: 197px;
+}
+
+.box_cabinet {
+  composes: box;
+  width: 207px;
+}
