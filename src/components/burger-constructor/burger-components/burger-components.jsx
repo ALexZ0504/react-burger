@@ -1,25 +1,46 @@
 import BurgerComponent from "./burger-component/burger-component";
-import { data } from "../../../utils/data.js";
 import styles from "./burger-components.module.css";
+import PropTypes from "prop-types";
 
-function BurgerComponents() {
-  const scrollItemIds = [5, 2, 4, 7, 8, 8];
+function BurgerComponents({ data }) {
+  if (!data || !Array.isArray(data)) {
+    return <div>Нет данных для отображения</div>;
+  }
 
-  const validScrollItems = scrollItemIds
-    .map((index) => data[index])
-    .filter((item) => item !== undefined);
+  const bun = data.find((item) => item.type === "bun");
+
+  const ingredients = data.filter((item) => item.type !== "bun");
 
   return (
     <div className={styles.container}>
-      <BurgerComponent productId={data[0]._id} type="top" isLocked={true} />
+      {bun && <BurgerComponent item={bun} type="top" isLocked={true} />}
       <div className={styles.scroll}>
-        {validScrollItems.map((item) => (
-          <BurgerComponent key={item._id} productId={item._id} visible />
+        {ingredients.map((item) => (
+          <BurgerComponent key={item._id} item={item} visible />
         ))}
       </div>
-      <BurgerComponent productId={data[0]._id} type="bottom" isLocked={true} />
+      {bun && <BurgerComponent item={bun} type="bottom" isLocked={true} />}
     </div>
   );
 }
+
+BurgerComponents.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      _id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      type: PropTypes.oneOf(["bun", "sauce", "main"]).isRequired,
+      proteins: PropTypes.number.isRequired,
+      fat: PropTypes.number.isRequired,
+      carbohydrates: PropTypes.number.isRequired,
+      calories: PropTypes.number.isRequired,
+      price: PropTypes.number.isRequired,
+      image: PropTypes.string.isRequired,
+      image_mobile: PropTypes.string.isRequired,
+      image_large: PropTypes.string.isRequired,
+      __v: PropTypes.number.isRequired,
+    })
+  ),
+};
 
 export default BurgerComponents;
