@@ -1,0 +1,22 @@
+.idNumber {
+  margin-top: 120px;
+  text-shadow: 0 0 20px #3333ff;
+}
+
+.idTitle {
+  margin-top: 32px;
+}
+
+.imgDone {
+  width: 120px;
+  height: 120px;
+  margin: 60px 0;
+}
+
+.orderCooking {
+  margin-bottom: 8px;
+}
+
+.orderWaiting {
+  margin-bottom: 120px;
+}

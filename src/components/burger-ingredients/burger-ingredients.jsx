@@ -3,7 +3,7 @@ import TabList from "./tab-list/tab-list";
 import BurgerItem from "./burger-item/burger-item";
 import PropTypes from "prop-types";
 
-function BurgerIngredients({ data }) {
+function BurgerIngredients({ data, openModal }) {
   if (!data || !Array.isArray(data)) {
     return <div>Нет данных для отображения</div>;
   }
@@ -33,7 +33,11 @@ function BurgerIngredients({ data }) {
               </h3>
               <div className={styles.itemsGrid}>
                 {items.map((item) => (
-                  <BurgerItem key={item._id} item={item} />
+                  <BurgerItem
+                    key={item._id}
+                    item={item}
+                    openModal={openModal}
+                  />
                 ))}
               </div>
             </div>
@@ -61,6 +65,7 @@ BurgerIngredients.propTypes = {
       __v: PropTypes.number.isRequired,
     })
   ),
+  openModal: PropTypes.func.isRequired,
 };
 
 export default BurgerIngredients;

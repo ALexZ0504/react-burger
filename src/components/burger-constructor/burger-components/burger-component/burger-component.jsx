@@ -14,7 +14,7 @@ function BurgerComponent({ item, visible, type, isLocked }) {
 
   return (
     <div className={styles.component}>
-      <button className={visibility} src={move} alt="Иконка перемещения" />
+      <img className={visibility} src={move} alt="Иконка перемещения" />
       <ConstructorElement
         type={type}
         isLocked={isLocked}

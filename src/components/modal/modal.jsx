@@ -1,30 +1,32 @@
-import styles from "./modal.module.css";
 import ModalOverlay from "./modal-overlay/modal-overlay";
+import OrderDetails from "../order-details/order-details";
+import IngredientDetails from "../ingredient-details/ingredient-details";
 import { CloseIcon } from "@ya.praktikum/react-developer-burger-ui-components";
-import done from "../../images/done.jpg";
+import styles from "./modal.module.css";
+import ReactDOM from "react-dom";
+import PropTypes from "prop-types";
 
-function Modal() {
-  return (
+const modal = document.getElementById("modal");
+
+function Modal({ onClose, children }) {
+  return ReactDOM.createPortal(
     <>
-      <ModalOverlay />
+      <ModalOverlay onClose={onClose} />
       <div className={styles.container}>
-        <CloseIcon type="primary" className={styles.close} />
-        <p className={`text text_type_digits-large ${styles.idNumber}`}>
-          034536
-        </p>
-        <p className={`text text_type_main-medium ${styles.idTitle}`}>
-          идентификатор заказа
-        </p>
-        <img className={styles.imgDone} src={done} />
-        <p className={`text text_type_main-default ${styles.orderCooking}`}>
-          Ваш заказ начали готовить
-        </p>
-        <p className="text text_type_main-default text_color_inactive">
-          Дождитесь готовности на орбитальной станции
-        </p>
+        <button className={styles.close} onClick={onClose}>
+          <CloseIcon type="primary" />
+        </button>
+        {/* {children} */}
+        <IngredientDetails />
       </div>
-    </>
+    </>,
+    modal
   );
 }
 
 export default Modal;
+
+Modal.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired,
+};
