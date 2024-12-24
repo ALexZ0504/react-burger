@@ -3,7 +3,11 @@ import { CurrencyIcon } from "@ya.praktikum/react-developer-burger-ui-components
 import { Counter } from "@ya.praktikum/react-developer-burger-ui-components";
 import PropTypes from "prop-types";
 
-function BurgerItem({ item, openModal }) {
+function BurgerItem({ item, openIngredientModal }) {
+  const handleItemClick = () => {
+    openIngredientModal(item);
+  };
+
   return (
     <div className={styles.item}>
       <Counter
@@ -16,7 +20,7 @@ function BurgerItem({ item, openModal }) {
         className={styles.img}
         src={item.image}
         alt={item.name}
-        onClick={openModal}
+        onClick={handleItemClick}
       />
       <div className={styles.priceBox}>
         <h3 className="text text_type_digits-default">{item.price}</h3>
@@ -44,7 +48,7 @@ BurgerItem.propTypes = {
     image_large: PropTypes.string.isRequired,
     __v: PropTypes.number.isRequired,
   }),
-  openModal: PropTypes.func.isRequired,
+  openIngredientModal: PropTypes.func.isRequired,
 };
 
 export default BurgerItem;

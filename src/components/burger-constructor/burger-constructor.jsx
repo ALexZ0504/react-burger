@@ -4,7 +4,7 @@ import { CurrencyIcon } from "@ya.praktikum/react-developer-burger-ui-components
 import { Button } from "@ya.praktikum/react-developer-burger-ui-components";
 import PropTypes from "prop-types";
 
-function BurgerConstructor({ data, openModal }) {
+function BurgerConstructor({ data, openOrderModal }) {
   if (!data || !Array.isArray(data)) {
     return <div>Загрузка...</div>;
   }
@@ -25,7 +25,7 @@ function BurgerConstructor({ data, openModal }) {
           htmlType="button"
           type="primary"
           size="medium"
-          onClick={openModal}
+          onClick={openOrderModal}
         >
           Оформить заказ
         </Button>
@@ -51,7 +51,7 @@ BurgerConstructor.propTypes = {
       __v: PropTypes.number.isRequired,
     })
   ),
-  openModal: PropTypes.func.isRequired,
+  openOrderModal: PropTypes.func.isRequired,
 };
 
 export default BurgerConstructor;

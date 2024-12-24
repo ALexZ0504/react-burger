@@ -10,9 +10,25 @@ const api = "https://norma.nomoreparties.space/api/ingredients";
 function App() {
   const [data, setData] = useState();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState(null);
+  const [selectedIngredient, setSelectedIngredient] = useState(null);
 
   const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setModalContent(null);
+    setSelectedIngredient(null);
+  };
+
+  const openIngredientModal = (item) => {
+    openModal();
+    setModalContent("ingredient");
+    setSelectedIngredient(item);
+  };
+  const openOrderModal = () => {
+    openModal();
+    setModalContent("order");
+  };
 
   // console.log("🚀 ~ App ~ data:", data);
 
@@ -37,9 +53,18 @@ function App() {
     <div className="App">
       <AppHeader />
       <main className={styles.main}>
-        <BurgerIngredients data={data} openModal={openModal} />
-        <BurgerConstructor data={data} openModal={openModal} />
-        {isModalOpen && <Modal onClose={closeModal} />}
+        <BurgerIngredients
+          data={data}
+          openIngredientModal={openIngredientModal}
+        />
+        <BurgerConstructor data={data} openOrderModal={openOrderModal} />
+        {isModalOpen && (
+          <Modal
+            onClose={closeModal}
+            modalContent={modalContent}
+            selectedIngredient={selectedIngredient}
+          />
+        )}
       </main>
     </div>
   );
