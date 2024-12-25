@@ -1,11 +1,13 @@
 import styles from "./burger-item.module.css";
 import { CurrencyIcon } from "@ya.praktikum/react-developer-burger-ui-components";
-import { data } from "../../../utils/data";
 import { Counter } from "@ya.praktikum/react-developer-burger-ui-components";
 import PropTypes from "prop-types";
 
-function BurgerItem({ productId }) {
-  const product = data.find((p) => p._id === productId);
+function BurgerItem({ item, openIngredientModal }) {
+  const handleItemClick = () => {
+    openIngredientModal(item);
+  };
+
   return (
     <div className={styles.item}>
       <Counter
@@ -14,20 +16,39 @@ function BurgerItem({ productId }) {
         extraClass="m-1"
         className={styles.position}
       />
-      <img className={styles.img} src={product.image}></img>
+      <img
+        className={styles.img}
+        src={item.image}
+        alt={item.name}
+        onClick={handleItemClick}
+      />
       <div className={styles.priceBox}>
-        <h3 className="text text_type_digits-default">{product.price}</h3>
+        <h3 className="text text_type_digits-default">{item.price}</h3>
         <CurrencyIcon />
       </div>
       <p className={`${styles.textCenter} text text_type_main-small`}>
-        {product.name}
+        {item.name}
       </p>
     </div>
   );
 }
 
 BurgerItem.propTypes = {
-  productId: PropTypes.string,
+  item: PropTypes.shape({
+    _id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    type: PropTypes.oneOf(["bun", "sauce", "main"]).isRequired,
+    proteins: PropTypes.number.isRequired,
+    fat: PropTypes.number.isRequired,
+    carbohydrates: PropTypes.number.isRequired,
+    calories: PropTypes.number.isRequired,
+    price: PropTypes.number.isRequired,
+    image: PropTypes.string.isRequired,
+    image_mobile: PropTypes.string.isRequired,
+    image_large: PropTypes.string.isRequired,
+    __v: PropTypes.number.isRequired,
+  }),
+  openIngredientModal: PropTypes.func.isRequired,
 };
 
 export default BurgerItem;

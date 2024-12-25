@@ -1,0 +1,43 @@
+.title {
+  width: 640px;
+  height: 64px;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.img {
+  width: 520px;
+  height: 240px;
+  margin-bottom: 16px;
+  border: 1px solid #4c4cff;
+}
+
+.text {
+  width: 520px;
+  height: 30px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.parameters {
+  max-width: 520px;
+  margin-bottom: 60px;
+  display: flex;
+  gap: 20px;
+}
+
+.parameter {
+  width: 112px;
+  height: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.parameterInfo {
+  width: 112px;
+  height: 24px;
+  margin: 0;
+  text-align: center;
+}

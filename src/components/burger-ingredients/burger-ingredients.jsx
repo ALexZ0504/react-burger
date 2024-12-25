@@ -1,9 +1,13 @@
 import styles from "./burger-ingredients.module.css";
 import TabList from "./tab-list/tab-list";
 import BurgerItem from "./burger-item/burger-item";
-import { data } from "../../utils/data";
+import PropTypes from "prop-types";
 
-function BurgerIngredients() {
+function BurgerIngredients({ data, openIngredientModal }) {
+  if (!data || !Array.isArray(data)) {
+    return <div>Нет данных для отображения</div>;
+  }
+
   const buns = data.filter((item) => item.type === "bun");
   const sauces = data.filter((item) => item.type === "sauce");
   const mains = data.filter((item) => item.type === "main");
@@ -13,6 +17,7 @@ function BurgerIngredients() {
     { name: "Соусы", items: sauces },
     { name: "Начинки", items: mains },
   ];
+
   return (
     <section className={styles.container}>
       <h2 className={`${styles.title} text text_type_main-large`}>
@@ -28,7 +33,11 @@ function BurgerIngredients() {
               </h3>
               <div className={styles.itemsGrid}>
                 {items.map((item) => (
-                  <BurgerItem key={item._id} productId={item._id} />
+                  <BurgerItem
+                    key={item._id}
+                    item={item}
+                    openIngredientModal={openIngredientModal}
+                  />
                 ))}
               </div>
             </div>
@@ -38,5 +47,25 @@ function BurgerIngredients() {
     </section>
   );
 }
+
+BurgerIngredients.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      _id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      type: PropTypes.oneOf(["bun", "sauce", "main"]).isRequired,
+      proteins: PropTypes.number.isRequired,
+      fat: PropTypes.number.isRequired,
+      carbohydrates: PropTypes.number.isRequired,
+      calories: PropTypes.number.isRequired,
+      price: PropTypes.number.isRequired,
+      image: PropTypes.string.isRequired,
+      image_mobile: PropTypes.string.isRequired,
+      image_large: PropTypes.string.isRequired,
+      __v: PropTypes.number.isRequired,
+    })
+  ),
+  openIngredientModal: PropTypes.func.isRequired,
+};
 
 export default BurgerIngredients;
